@@ -1,0 +1,23 @@
+#lang forge/froglet
+
+sig Wow {
+
+}
+
+sig Foo {
+	ayo: lone Int
+}
+
+sig Bar {
+	ayo: lone Int,
+	bruh: func Int -> Int
+}
+
+// ayo
+pred BarFact {
+	all b : Bar | {}
+	all f : foo | {
+		x
+		y.z
+	}
+}
