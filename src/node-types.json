@@ -143,6 +143,25 @@
     }
   },
   {
+    "type": "run",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "constraint",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "sig",
     "named": true,
     "fields": {},
@@ -176,6 +195,10 @@
         },
         {
           "type": "pred",
+          "named": true
+        },
+        {
+          "type": "run",
           "named": true
         },
         {
@@ -342,6 +365,10 @@
   },
   {
     "type": "pred",
+    "named": false
+  },
+  {
+    "type": "run",
     "named": false
   },
   {

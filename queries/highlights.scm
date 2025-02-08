@@ -4,6 +4,7 @@
 "pfunc" @keyword
 "extends" @keyword
 "abstract" @keyword
+"run" @keyword
 "#lang" @keyword
 
 "no" @attribute
@@ -35,4 +36,3 @@
 (type_identifier) @type
 (field) @property
 (comment) @comment
-

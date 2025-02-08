@@ -23,7 +23,8 @@ module.exports = grammar({
       $.lang,
       repeat(choice(
         $.sig,
-        $.pred
+        $.pred,
+        $.run
       ))
     ),
 
@@ -78,6 +79,17 @@ module.exports = grammar({
       )),
       "{", 
       optional(seq(repeat(seq($.field, ",")), $.field)),
+      "}"
+    ),
+
+    run: $ => seq(
+      optional(seq(
+        $.identifier,
+        ":"
+      )),
+      "run",
+      "{", 
+      repeat($.constraint),
       "}"
     ),
 
