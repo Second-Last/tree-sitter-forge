@@ -8,7 +8,7 @@
 // @ts-check
 
 module.exports = grammar({
-  name: "froglet",
+  name: "forge",
 
   extras: $ => [
     /\s|\\\r?\n/,

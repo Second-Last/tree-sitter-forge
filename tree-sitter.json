@@ -10,7 +10,7 @@
         "frg"
       ],
       "highlights": "queries/highlights.scm",
-      "injection-regex": "^forge$",
+      "injection-regex": "^(forge|froglet)$",
       "class-name": "TreeSitterForge"
     }
   ],
