@@ -6,6 +6,8 @@ Mainly for syntax-highlighting on NeoVim and Emacs.
 Not all syntax are implemented, especially since there are ambiguities in
 the Forge syntax, but it's enough for usage.
 
+![example highlighting](screenshot.png)
+
 ## Instructions
 
 ### NeoVim
