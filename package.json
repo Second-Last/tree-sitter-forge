@@ -1,12 +1,13 @@
 {
-  "name": "tree-sitter-froglet",
+  "name": "tree-sitter-forge",
   "version": "0.1.0",
-  "description": "A more user-friendly Forge, I think.",
-  "repository": "https://github.com/second-last/tree-sitter-froglet",
+  "description": "Tree-sitter parser for Forge, a language for teaching introductory formal methods and modeling.",
+  "repository": "https://github.com/second-last/tree-sitter-forge",
   "license": "MIT",
   "author": {
     "name": "Gavin Zhao",
-    "email": "gavinz@brown.edu"
+    "email": "gavinz@brown.edu",
+    "url": "https://github.com/Second-Last"
   },
   "main": "bindings/node",
   "types": "bindings/node",
@@ -14,7 +15,7 @@
     "incremental",
     "parsing",
     "tree-sitter",
-    "froglet"
+    "forge"
   ],
   "files": [
     "grammar.js",

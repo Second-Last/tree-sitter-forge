@@ -2,31 +2,31 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "froglet",
-      "camelcase": "Froglet",
-      "title": "Froglet",
-      "scope": "source.froglet",
-      "path": ".",
+      "name": "forge",
+      "camelcase": "Forge",
+      "title": "Forge",
+      "scope": "source.forge",
       "file-types": [
-        "froglet"
+        "frg"
       ],
       "highlights": "queries/highlights.scm",
-      "injection-regex": "^froglet$",
-      "class-name": "TreeSitterFroglet"
+      "injection-regex": "^forge$",
+      "class-name": "TreeSitterForge"
     }
   ],
   "metadata": {
     "version": "0.1.0",
     "license": "MIT",
-    "description": "A more user-friendly Forge, I think.",
+    "description": "Tree-sitter parser for Forge, a language for teaching introductory formal methods and modeling.",
     "authors": [
       {
         "name": "Gavin Zhao",
-        "email": "gavinz@brown.edu"
+        "email": "gavinz@brown.edu",
+        "url": "https://github.com/Second-Last"
       }
     ],
     "links": {
-      "repository": "https://github.com/Second-Last/tree-sitter-froglet"
+      "repository": "https://github.com/Second-Last/tree-sitter-forge"
     }
   },
   "bindings": {

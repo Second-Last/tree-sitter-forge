@@ -21,6 +21,7 @@
 "||" @operator
 "or" @operator
 "=>" @operator
+"=" @operator
 "implies" @keyword
 "else" @keyword
 "iff" @operator
@@ -32,5 +33,6 @@
 ":" @punctuation.delimiter
 
 (type_identifier) @type
-(field) @property 
+(field) @property
 (comment) @comment
+

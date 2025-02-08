@@ -1,13 +1,13 @@
 [package]
-name = "tree-sitter-froglet"
-description = "A more user-friendly Forge, I think."
+name = "tree-sitter-forge"
+description = "Tree-sitter parser for Forge, a language for teaching introductory formal methods and modeling."
 version = "0.1.0"
 authors = ["Gavin Zhao <gavinz@brown.edu>"]
 license = "MIT"
 readme = "README.md"
-keywords = ["incremental", "parsing", "tree-sitter", "froglet"]
+keywords = ["incremental", "parsing", "tree-sitter", "forge"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/second-last/tree-sitter-froglet"
+repository = "https://github.com/second-last/tree-sitter-forge"
 edition = "2021"
 autoexamples = false
 

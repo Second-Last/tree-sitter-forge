@@ -1,4 +1,4 @@
-module github.com/second-last/tree-sitter-froglet
+module github.com/second-last/tree-sitter-forge
 
 go 1.22
 

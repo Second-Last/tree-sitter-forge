@@ -1,4 +1,4 @@
-"""A more user-friendly Forge, I think."""
+"""Tree-sitter parser for Forge, a language for teaching introductory formal methods and modeling."""
 
 from importlib.resources import files as _files
 

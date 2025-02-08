@@ -1,5 +1,24 @@
 [
   {
+    "type": "args_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "constraint",
     "named": true,
     "fields": {},
@@ -8,15 +27,11 @@
       "required": true,
       "types": [
         {
+          "type": "args_decl",
+          "named": true
+        },
+        {
           "type": "formula",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "type",
           "named": true
         }
       ]
@@ -36,6 +51,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
           "named": true
         }
       ]
@@ -77,7 +96,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "expr",
@@ -108,6 +127,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "args_decl",
+          "named": true
+        },
         {
           "type": "constraint",
           "named": true
@@ -193,6 +216,10 @@
     }
   },
   {
+    "type": "!=",
+    "named": false
+  },
+  {
     "type": "#lang",
     "named": false
   },
@@ -230,6 +257,14 @@
   },
   {
     "type": "Int",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {
@@ -288,6 +323,10 @@
   {
     "type": "not",
     "named": false
+  },
+  {
+    "type": "number",
+    "named": true
   },
   {
     "type": "one",

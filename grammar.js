@@ -38,7 +38,7 @@ module.exports = grammar({
       ),
     )),
 
-    identifier: $ => /[A-Za-z]+/,
+    identifier: $ => /[A-Za-z]+[0-9A-Za-z]*/,
 
     type_identifier: $ => $.identifier,
 
@@ -84,35 +84,59 @@ module.exports = grammar({
     pred: $ => seq(
       "pred",
       $.identifier,
+      optional(seq(
+        "[",
+        $.args_decl,
+        "]"
+      )),
       "{", 
       repeat($.constraint),
       "}"
     ),
 
-    _constraint_param: $ => 
-      seq(repeat(seq($.identifier, ",")), $.identifier, ":", $.type),
+    _arg_decl_single: $ => seq(
+      repeat(seq($.identifier, ",")), $.identifier, ":", $.type
+    ),
 
-    constraint: $ => seq(
-      choice("all", "some"),
-      optional(choice("disj")),
-      repeat(seq($._constraint_param, ",")),
-      $._constraint_param,
-      "|",
-      choice(
-        $.formula,
-        seq("{", repeat($.formula), "}")
+    args_decl: $ => seq(
+      repeat(seq($._arg_decl_single, ",")),
+      $._arg_decl_single
+    ),
+
+    constraint: $ => choice(
+      $.formula,
+      seq(
+        choice("all", "some"),
+        optional(choice("disj")),
+        //repeat(seq($._constraint_param, ",")),
+        //$._constraint_param,
+        $.args_decl,
+        "|",
+        $.formula
+        //choice(
+        //  $.formula,
+        //  seq("{", repeat($.formula), "}")
+        //)
       )
     ),
 
     expr: $ => choice(
       $._expr,
+      seq(
+        $.expr,
+        token.immediate("["),
+        repeat(seq($.expr, ",")),
+        $.expr,
+        "]"
+      ),
       prec.left(5, seq($.expr, token.immediate("."), $.expr))
     ),
 
-    _expr: $ => $.identifier,
+    _expr: $ => choice($.identifier, $.number),
 
     formula: $ => choice(
       $._formula,
+      seq("{", repeat($.formula), "}"),
       prec.left(5, seq("not", $.formula)),
       prec.left(4, seq($.formula, choice("and", "&&"), $.formula)),
       prec.left(3, seq($.formula, choice("or", "||"), $.formula)),
@@ -135,7 +159,8 @@ module.exports = grammar({
       seq("one", $.expr),
       seq("lone", $.expr),
       seq("some", $.expr),
-      seq($.expr, "=", $.expr)
+      seq($.expr, "=", $.expr),
+      seq($.expr, "!=", $.expr)
     ),
   }
 });
