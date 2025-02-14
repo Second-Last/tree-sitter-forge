@@ -24,7 +24,9 @@ module.exports = grammar({
       repeat(choice(
         $.sig,
         $.pred,
-        $.run
+        $.run,
+        $.test_suite,
+        $.example
       ))
     ),
 
@@ -102,6 +104,20 @@ module.exports = grammar({
         "]"
       )),
       "{", 
+      repeat($.constraint),
+      "}"
+    ),
+
+    test_suite: $ => seq(
+      "test", "suite", "for", $.identifier,
+      "{",
+      repeat($.example),
+      "}"
+    ),
+
+    example: $ => seq(
+      "example", $.identifier, "is", $.formula, "for",
+      "{",
       repeat($.constraint),
       "}"
     ),

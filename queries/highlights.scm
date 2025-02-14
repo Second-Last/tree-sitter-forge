@@ -7,6 +7,11 @@
 "run" @keyword
 "#lang" @keyword
 
+"test" @keyword
+"suite" @keyword
+"for" @operator
+"example" @keyword
+
 "no" @attribute
 "one" @attribute
 "lone" @attribute

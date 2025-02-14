@@ -38,6 +38,29 @@
     }
   },
   {
+    "type": "example",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constraint",
+          "named": true
+        },
+        {
+          "type": "formula",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "expr",
     "named": true,
     "fields": {},
@@ -190,6 +213,10 @@
       "required": true,
       "types": [
         {
+          "type": "example",
+          "named": true
+        },
+        {
           "type": "lang",
           "named": true
         },
@@ -203,6 +230,29 @@
         },
         {
           "type": "sig",
+          "named": true
+        },
+        {
+          "type": "test_suite",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "test_suite",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "example",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -304,8 +354,7 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "disj",
@@ -316,7 +365,15 @@
     "named": false
   },
   {
+    "type": "example",
+    "named": false
+  },
+  {
     "type": "extends",
+    "named": false
+  },
+  {
+    "type": "for",
     "named": false
   },
   {
@@ -333,6 +390,10 @@
   },
   {
     "type": "implies",
+    "named": false
+  },
+  {
+    "type": "is",
     "named": false
   },
   {
@@ -377,6 +438,14 @@
   },
   {
     "type": "some",
+    "named": false
+  },
+  {
+    "type": "suite",
+    "named": false
+  },
+  {
+    "type": "test",
     "named": false
   },
   {
